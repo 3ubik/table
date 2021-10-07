@@ -25,6 +25,7 @@ function App() {
   
   
   
+  
   const paginate = pageNumber => setCurrentPage(pageNumber)
   const indexOfLastUser = currentPage * usersPerPage
   const indexOfFirstUser = indexOfLastUser - usersPerPage
@@ -113,7 +114,7 @@ const sortData = (val, el) => {
      setData(data.sort((a,b) => b[el].localeCompare(a[el])))
      setCurrentUsers(data.slice(indexOfFirstUser, indexOfLastUser))
   }
-  console.log(data);
+  
 }
 
 const sortDataFilter = (val ,el) => {
@@ -160,8 +161,11 @@ const sortString = (val, str) => {
     const filtered = data && data.filter((item) => {
       return item.firstName.toLowerCase().trim().startsWith(e.target.value.toLowerCase().trim())
     })
-    setFilteredData(filtered)
-    setCurrentUsers(filteredData.slice(indexOfFirstUser, indexOfLastUser))
+   
+    e.target.value ? setFilterCheck(true) : setFilterCheck (false)
+
+    setDataFilter(filtered)
+    setCurrentUsers(filtered.slice(indexOfFirstUser, indexOfLastUser))
     
 }
 
