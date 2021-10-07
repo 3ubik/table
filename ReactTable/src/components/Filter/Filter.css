@@ -1,0 +1,22 @@
+.filter {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background: #5250d4 ;
+    border: none;
+    font-size: 16px;
+    border-radius:5%;
+    margin-left: 170px;
+}
+
+.filter:active,
+.filter:focus,
+.filter:hover {
+    outline: none;
+}
+
+.option {
+    background: white;
+    color: black;
+}

@@ -1,1 +1,10 @@
-
+.search_and_filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.click_on_user{
+    display: flex;
+    justify-content: center;
+}

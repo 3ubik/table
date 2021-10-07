@@ -1,0 +1,22 @@
+.input_search_field {
+    border: 1px solid black;
+    background: #ffffff ;
+    border-radius:5%;
+    width: 220px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.input_search_field::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.input_search_field:active,
+.input_search_field:focus,
+.input_search_field:hover
+{
+    outline: none;
+}

@@ -8,27 +8,27 @@
 }
 
 .pagination-container button {
-    font-family: 'Archivo Narrow', sans-serif;
     font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(62, 78, 219);
     height: 55px;
     width: 60px;
     text-decoration: none;
-    transition: background-color .2s;
+    transition: background-color .3s;
     border: 2px solid #ddd;
     cursor: pointer;
     background-color: transparent;
-    border-radius: 100%;
-    margin: 15px 5px;
+    border-radius: 5%;
+    margin-top: 15px;
+    border-collapse: collapse;
 }
 
 .pagination-container button.active {
-    background-color: #717474;
+    background-color: #bbcaf3;
     color: white;
-    border: 2px solid #141618;
+    border: 2px solid #1626b6;
 }
 
 .pagination-container button.disabled {

@@ -1,3 +1,6 @@
 .profile_info{
     border: 2px solid black;
+    text-align: center;
+    width: 30em;
+    margin: 20px auto;
 }

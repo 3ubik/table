@@ -33,5 +33,7 @@ tr {
 
 .table{
     border-collapse: collapse;
-    
+    margin: 0 auto;
 }
+
+

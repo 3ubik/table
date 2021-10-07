@@ -1,28 +1,34 @@
-import React, {useState} from "react";
-import { ReactComponent as ArrowDown } from "../../images/arrow.svg";
+import React, {useState} from "react"
+import { ReactComponent as ArrowDown } from "../../images/arrow.svg"
 import './table.css'
-const Table = ({data, viewProfileInfo }) =>{
+const Table = ({data, viewProfileInfo, sortId, sortString}) =>{
 
-    const [rotateId, setRotateId] = useState(false);
-    const [rotateFirstName, setRotateFirstName] = useState(false);
-    const [rotateLastName, setRotateLastName] = useState(false);
-    const [rotateEmail, setRotateEmail] = useState(false);
-    const [rotatePhone, setRotatePhone] = useState(false);
-    const [rotateState, setRotateState] = useState(false);
-console.log(data);
+    const [rotateId, setRotateId] = useState(false)
+    const [rotateFirstName, setRotateFirstName] = useState(false)
+    const [rotateLastName, setRotateLastName] = useState(false)
+    const [rotateEmail, setRotateEmail] = useState(false)
+    const [rotatePhone, setRotatePhone] = useState(false)
+    const [rotateState, setRotateState] = useState(false)
+
     const rotateArrow = (e) =>{
         switch (e) {
             case 'id':  setRotateId(!rotateId)
+                sortId(rotateId)
                 break;
-            case 'firstName': setRotateFirstName(!rotateFirstName)               
+            case 'firstName': setRotateFirstName(!rotateFirstName)
+                sortString (rotateFirstName, 'firstName')              
                 break;
-            case 'lastName': setRotateLastName(!rotateLastName)             
+            case 'lastName': setRotateLastName(!rotateLastName) 
+                sortString (rotateLastName, 'lastName')            
                 break;
-            case 'email': setRotateEmail(!rotateEmail)        
+            case 'email': setRotateEmail(!rotateEmail) 
+                sortString (rotateEmail, 'email')       
                 break;
-            case 'phone': setRotatePhone(!rotatePhone)             
+            case 'phone': setRotatePhone(!rotatePhone) 
+                sortString (rotatePhone, 'phone')            
                 break;
-            case 'state': setRotateState(!rotateState)           
+            case 'state': setRotateState(!rotateState)
+                sortString (rotateState, 'state')           
                 break;
             default:
                 break;
@@ -58,7 +64,7 @@ console.log(data);
              {data.map((e,index) => {
                  
                 return (
-                    <tr key={index} onClick = {() => viewProfileInfo(index) } >
+                    <tr key={index}  onClick = {() => viewProfileInfo(index) } >
                         <td>{e.id}</td>
                         <td>{e.firstName}</td>
                         <td>{e.lastName}</td>
